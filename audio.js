@@ -225,7 +225,7 @@ function sequencerGrid(sequencerNumber) {
                 7: "Guitar_G2.mp3",
             },
 
-                baseUrl: "/assets/audio-samples/Guitar/",
+                baseUrl: "assets/audio-samples/Guitar/",
         }).connect(channel.pan).connect(channel.reverb).connect(channel.delay),
 
         // - Piano
@@ -241,7 +241,7 @@ function sequencerGrid(sequencerNumber) {
                 7: "Piano_G3.mp3",
             },
 
-                baseUrl: "/assets/audio-samples/Piano/",
+                baseUrl: "assets/audio-samples/Piano/",
         }).connect(channel.pan).connect(channel.reverb).connect(channel.delay),
 
         // - Bass
@@ -257,7 +257,7 @@ function sequencerGrid(sequencerNumber) {
                 7: "Bass_G0.mp3",
             },
 
-                baseUrl: "/assets/audio-samples/Bass/",
+                baseUrl: "assets/audio-samples/Bass/",
         }).connect(channel.pan).connect(channel.reverb).connect(channel.delay),
 
         // - Drums
@@ -268,7 +268,7 @@ function sequencerGrid(sequencerNumber) {
                 2: "Kick.mp3",
             },
 
-                baseUrl: "/assets/audio-samples/Drums/",
+                baseUrl: "assets/audio-samples/Drums/",
         }).connect(channel.pan).connect(channel.reverb).connect(channel.delay),
     };
 
