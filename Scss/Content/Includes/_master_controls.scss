@@ -1,0 +1,70 @@
+#master-controls {
+    display: flex;
+    align-items: flex-end;
+
+    #play {
+        #play-button {
+            @include btn-type("play");
+
+            &::after {
+                content: '\25BA';
+            }
+        }
+    }
+
+    #stop {
+        #stop-button {
+            @include btn-type("stop");
+
+            &::after {
+                content: '\25A0';
+            }
+        }
+    }
+
+    #master-volume {
+        display: flex;
+        flex-direction: column;
+
+        .master-slider {
+            display: flex;
+
+            input {
+                @include slider-type("master");
+                display: flex;
+                width: 75%;
+            }
+
+            span {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    #tempo-selection {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        input {
+            text-align: center;
+            @include small-text;
+        }
+    }
+}
+
+@media  screen and (max-width: 991px) {
+    #master-controls {
+        #play, #stop, #tempo-selection {
+            padding-bottom: 10px;
+        }
+
+        #master-volume {
+            .master-slider {
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

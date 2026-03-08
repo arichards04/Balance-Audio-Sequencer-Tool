@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href= "base.css">
+
+        <!-- Meta Data -->
+        <meta charset="UTF-8">
+        <meta name="description" content="An accessible web-based audio tool for music therapy">
+        <meta name="keywords" content="Audio Sequencer, Web Audio, Music Therapy, Music Creation">
+        <meta name="author" content="Amber Richards">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+        <!-- External File Linking -->
+        <link rel="stylesheet" href="../css/base.css">
+
+        <!-- Imports Tone.js from unpkg -->
+        <script src="https://unpkg.com/tone"></script>
+
+        <!-- Page Title -->
+        <title>User Guide - Balance: Audio Sequencer Tool</title>
+        <link rel="icon" href="../assets/images/favicon-dark.jpg"> <!-- Favicon -->
+    </head>
+
+    <a href="#skipToMainContent" class="skip-link">Skip to main content</a>
+
+    <body>
+        <header id="top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12">
+                        <h1>User Guide</h1>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="balance">
+                            <a href="../index.html" class="balance-btn">Return to Balance: Audio Sequencer Tool</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+                
+        <main id="skipToMainContent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p>Learn how to get started with Balance: Audio Sequencer Tool. This guide explores the different features of the tool and provides examples of how you could use each feature. Please use the menu below to navigate to the section you wish to explore. </p>
+
+                        <div class="menu-ug">
+
+                            <a href="#master-ug" title="Links to the Master Controls section of the user guide">Master Controls</a>
+                            <ul>
+                                <li class="master-menu" title="Links to the Play and Stop button section of the user guide"><a href="#play-stop-ug">Play and Stop Buttons</a></li>
+
+                                <li class="master-menu" title="Links to the Tempo Control section of the user guide"><a href="#tempo-ug">Tempo Control</a></li>
+
+                                <li class="master-menu" title="Links to the Master Volume section of the user guide"><a href="#master-vol-ug">Master Volume</a></li>
+                            </ul>
+
+                            <a href="#mixer-ug" title="Links to the Mixer Controls section of the user guide">Mixer Controls</a>
+
+                            <ul>
+                                <li><a href="#instrument-ug" title="Links to the Channel Instrument Selection section of the user guide">Instrument Selection</a></li>
+                                <li><a href="#volume-ug" title="Links to the Channel Volume section of the user guide">Volume</a></li>
+                                <li><a href="#pan-ug" title="Links to the Channel Pan section of the user guide">Pan</a></li>
+                                <li><a href="#fx-selection-ug" title="Links to the Channel Effect Selection Controls section of the user guide">Effect Selection</a></li>
+                                <li><a href="#fx-slider-ug" title="Links to the Channel Effect Control section of the user guide">Effects Slider</a></li>
+                            </ul>
+
+                            <li><a href="#sequencer-ug" title="Links to the Step-Sequencer section of the user guide">Step-Sequencer</a></li>
+
+                            <li><a href="#video-demo" title="Links to the Video Demonstration section of the user guide">Video Demonstration</a></li>
+
+                            <li><a href="#accessibility" title="Links to the Accessibility section of the user guide">A Note on Accessibility</a></li>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="master-ug">
+                    <h2>Master Controls</h2>
+
+                    <div class="col-12 master-ug" id="play-stop-ug">
+                        <h3>Play and Stop Buttons</h3>
+                        <p>The play and stop buttons control if audio is being played through the sequencers. To hear your composition back, press the play button. To stop the audio playing, press the stop button.</p>
+
+                        <img src="../assets/images/Play and Stop Buttons.png" alt="Play and Stop buttons for Balance: Audio Sequencer Tool">
+                    </div>
+
+                    <div class="col-12 master-ug" id="tempo-ug">
+                        <h3>Tempo Control</h3>
+                        <p>This tempo controller operates as a text input. To change the tempo of the project, simply type in your desired bpm and the project will update in real time, even if audio is playing. Please note, this tempo control has a limited range of 60bpm to 200bpm. Therefore, the project tempo cannot go above or below this range.</p>
+ 
+                        <img src="../assets/images/Tempo Control.png" alt="Tempo controller for Balance: Audio Sequencer Tool" id="tempo-img">
+                    </div>
+
+                    <div class="col-12 master-ug" id="master-vol-ug">
+                        <h3>Master Volume</h3>
+                        <p>The master volume slider adjusts the volume of all four channels at the same time. Moving the slider to 0 will mute the audio for all channels, until the slider is moved again. Similarly, moving the master volume slider to 10 will make the audio for each channel very loud. Please take care when adjusting to high volumes and only do so for a minimal amount of time as to not damage your hearing.</p>
+
+                        <img src="../assets/images/Master Volume Slider.png" alt="Master volume slider for Balance: Audio Sequencer Tool">
+                    </div>
+
+                    <a href="#top" class="rtn" title="Returns to the main menu section of the user guide">Return to the User Guide menu</a>
+                </div>
+
+                <div class="row" id="mixer-ug">
+                    <h2>Mixer Controls</h2>
+
+                    <div class="col-12 mixer-ug">
+                        <p>The mixing controls for each channel consist of instrument selection, volume control, pan control, effect selection and effect control. These options are consistent through the sequencer channels for ease of learning.</p>
+  
+                        <img src="../assets/images/Channel Mixers.png" alt="Mixing controls showing, instruments, volume, pan, effects and effect control">
+                    </div>
+                        
+                    <div class="col-12 mixer-ug" id="instrument-ug">
+                        <h3>Instrument Selection</h3>
+                        <p>This option is demonstated in the form of a dropdown menu, labelled by "Select an instrument:". You may select from Guitar, Piano, Bass and Drums. If you would like to switch instruments on a channel, you must refresh your browser to do so. However, this will result in the loss of your current composition, so do so with caution.
+                        </p>
+
+                        <img src="../assets/images/Instrument Selection.png" alt="Instrument selection menu">
+                    </div>
+
+                    <div class="col-12 mixer-ug" id="volume-ug">
+                        <h3>Volume</h3>
+                        <p>Shown in the form of a blue slider, labelled "Channel Volume:", which controls the overall output volume for that particular channel. The range of this control is 0 (completely muted) to 10 (extremely loud). Please take care when adjusting to high volumes and only do so for a minimal amount of time as to not damage your hearing. </p>
+
+                        <img src="../assets/images/Channel Volume Slider.png" alt="Channel volume slider">
+                    </div>
+
+                    <div class="col-12 mixer-ug" id="pan-ug">
+                        <h3>Pan</h3>
+                        <p>Shown in the form of a green slider, labelled "Pan Control" which controls the directional output  for that particular channel. For example, you may wish to change the direction of the audio, to output from your left speaker. Do so by moving the slider to the left. The output label will then change from "C" to "L" to reflect this change. This control is limited to three directional options: "L" (hard left), "C" (central) and "R" (hard right).</p>
+
+                        <img src="../assets/images/Pan Control Slider.png" alt="Pan control slider">
+                    </div>
+
+                    <div class="col-12 mixer-ug" id="fx-selection-ug">
+                        <h3>Effect Selection</h3>
+                        <p>This option is demonstated in the form of two radio buttons, labelled "Reverb" and "Delay". These effects will only be able to be heard by moving the "Effect Control:" slider. You can of course choose not to have an effect on your channel, in which case, the Effect Control slider will remain bypassed. You may only choose one at effect per channel as a maximum.</p>
+
+                        <img src="../assets/images/Effect Selection.png" alt="Effect selection radio buttons for Reverb and Delay">
+                    </div>
+                        
+                    <div class="col-12 mixer-ug" id="fx-slider-ug">
+                        <h3>Effects Slider</h3>
+                        <p>Shown in the form of a yellow slider, labelled "Effect Control" which controls two different things, depending on which effect is selected. If you have not selected an effect, this slider will remain bypassed and you will hear clean, unchanged audio. The range of this slider begins at 0 (minimum, completely clean audio) and ends at 1 (maximum, completely altered audio).</p>
+
+                        <img src="../assets/images/Effect Slider.png" alt="Effect control  slider">
+                    </div>
+
+                    <div class="col-12 mixer-ug">
+                        <h4>Reverb</h4>
+                        <p>If you have selected reverb, the Effect Control slider will control the "Room Size" of the reverb. Please take care when adjusting to the maximum output on "Reverb" as the output is loud. Only do so for a minimal amount of time as to not damage your hearing.</p>
+
+                        <h4>Delay</h4>
+                        <p>If you have selected delay, the Effect Control slider will control the "Delay Time". This meaning the amount of time between the original audio playing and the delayed audio following.</p>
+                    </div>
+
+                    <a href="#top" class="rtn" title="Returns to the main menu section of the user guide">Return to the User Guide menu</a>
+                </div>
+
+                <div class="row" id="sequencer-ug">
+                    <h2>Step-Sequencer</h2>
+                    
+                    <div class="col-12 sequencer-ug">
+                        <p>The sequencers for each channel are where you will create your compositions. All sequencers are inactive when first loading the site to allow compositions to be created. Each sequencer is in the key of G major.</p>
+
+                        <img src="../assets/images/Channel Sequencers Inactive.png" alt="Channel Sequencers Inactive">
+                    </div>
+
+                    <div class="col-12 sequencer-ug">
+                        <p>By clicking on the indiviudal buttons in the sequencers, you will hear the corresponding note from the instrument you selected. These buttons will then become "active" and ready to be played back once the play button has been pressed.</p>
+
+                        <img src="../assets/images/Channel Sequencers Active.png" alt="Channel Sequencers Active">
+
+                        <p>Here is an example of what the sequencer tool will look like once all channel parameters and sequencer buttons have been adjusted:</p>
+                        <img src="../assets/images/Balance Audio Sequencer Tool Active.png" alt="Balance Audio Sequencer Tool Sequencers Active">
+                    </div>
+
+                    <a href="#top" class="rtn" title="Returns to the main menu section of the user guide">Return to the User Guide menu</a>
+                </div>
+
+                <div class="row" id="video-demo">
+                    <div class="col-12 sequencer-ug">
+                        <h2>Video Demonstration</h2>
+                        <iframe src="https://www.youtube.com/embed/qKmZk0QiH3g?si=_ciggnUNSTj0tXn5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+
+                    <a href="#top" class="rtn" title="Returns to the main menu section of the user guide">Return to the User Guide menu</a>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row" id="accessibility">
+                    <div class="col-12">
+                        <h2>A Note on Accessibility</h2>
+
+                        <p>You should be able to use this tool on mobile and be able to zoom up 300% on desktop without any loss of content. It is also possible to completely tab through this site. If you have any concerns on the accessibility of this website, please don't hesitate to get in touch.</p>
+                            
+                        <a href="mailto:u2264896@unimail.hud.ac.uk">Email me with your acccessibility concerns</a> <br>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <p>This project was designed and developed by Amber Richards for the BSc(Hons) Sound Engineering and Audio Technology course at the University of Huddersfield (2025 - 2026)</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

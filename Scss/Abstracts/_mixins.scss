@@ -1,0 +1,109 @@
+/* --- MIXINS --- */
+
+@mixin heading-1 {
+    font-size: $heading-1-text-size;
+    word-spacing: calc($heading-1-text-size*$word-spacing);
+    line-height: calc($heading-1-text-size*$line-height);
+}
+
+@mixin heading-2 {
+    font-size: $heading-2-text-size;
+    word-spacing: calc($heading-2-text-size*$word-spacing);
+    line-height: calc($heading-2-text-size*$line-height);
+};
+
+@mixin heading-3 {
+    font-size: $heading-3-text-size;
+    word-spacing: calc($heading-3-text-size*$word-spacing);
+    line-height: calc($heading-3-text-size*$line-height);
+}
+
+@mixin heading-4 {
+    font-size: $heading-4-text-size;
+    word-spacing: calc($heading-4-text-size*$word-spacing);
+    line-height: calc($heading-4-text-size*$line-height);
+}
+
+@mixin paragraph {
+    font-size: $paragraph-text-size;
+    word-spacing: calc($paragraph-text-size*$word-spacing);
+    line-height: calc($paragraph-text-size*$line-height);
+}
+
+@mixin small-text {
+    font-size: $small-text-size;
+    word-spacing: calc($small-text-size*$word-spacing);
+    line-height: calc($small-text-size*$line-height);
+}
+
+// BUTTONS
+// - Button Typography
+@mixin btn-text {
+    font-size: $btn-text-size;
+    word-spacing: calc($btn-text-size*$word-spacing);
+    line-height: calc($btn-text-size*$line-height);
+}
+
+// - Button Colours
+@mixin btn-type($btn-color) {
+    @include btn-text;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border-bottom: 2px solid $primary-text-color;
+    width: 40%;
+
+    &:active {
+        border: 0;
+    }
+
+    &::after {
+        margin-left: 10px;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus {
+        background-color: $focus-color;
+        color: $focus-text-color;
+        border-color: $focus-text-color;
+    }
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    @if $btn-color == "primary" {
+        background-color: $primary-btn-color !important;
+        color: $primary-btn-text-color !important;
+    } @else if $btn-color == "secondary" {
+        background-color: $secondary-btn-color;
+        color: $secondary-btn-text-color;
+    } @else if $btn-color == "play" {
+        background-color: $play-btn-color;
+        color: $secondary-btn-text-color;
+    } @else if $btn-color == "stop" {
+        background-color: $stop-btn-color;
+        color: $secondary-btn-text-color;
+    }
+}
+
+// SLIDERS
+@mixin slider-type($slider-color) {
+    @if $slider-color == "master" {
+        accent-color: $master-slider;
+    } @else if $slider-color == "volume" {
+        accent-color: $volume-slider;
+    } @else if $slider-color == "pan" {
+        accent-color: $pan-slider;
+    } @else if $slider-color == "effect" {
+        accent-color: $effect-slider;
+    }
+}
+
+@mixin focus {
+    background-color: $focus-color !important;
+    color: $focus-text-color !important;
+}

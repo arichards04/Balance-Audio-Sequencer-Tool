@@ -1,0 +1,72 @@
+html {
+    // Skip Link
+    .skip-link {
+        left: -9999px;
+        padding: 8px;
+        position: absolute;
+        @include btn-type("primary");
+        width: auto;
+
+        &:focus {
+            top: 10px;
+            left: 10px;
+            @include focus;
+        }
+    }
+
+    body {
+        header {
+            .information {
+                padding: 10px 0; 
+
+                .user-guide {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .user-btn {
+                        @include btn-type("primary");
+                        width: auto;
+
+                        &:focus {
+                            @include focus;
+                        }
+                    }
+                }
+            }
+
+            .balance {
+                display: flex;
+                justify-content: flex-end;
+
+                .balance-btn {
+                    @include btn-type("primary");
+                    width: auto;
+
+                    &:focus {
+                        @include focus;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media  screen and (max-width: 991px) {
+    header {
+        h1 {
+            padding-bottom: 10px;
+        }
+
+        .information {
+            .user-guide {
+                justify-content: flex-start !important;
+                padding-bottom: 10px;
+            }
+        }
+
+        .balance {
+            justify-content: flex-start !important;
+            // padding-bottom: 10px;
+        }
+    }
+}

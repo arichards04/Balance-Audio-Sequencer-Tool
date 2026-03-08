@@ -1,0 +1,49 @@
+/* --- VARIABLES --- */
+
+// TYPOGRAPHY
+$heading-1-text-size: 3rem;
+$heading-2-text-size: 2.6rem;
+$heading-3-text-size: 2.4rem;
+$heading-4-text-size: 2rem;
+$paragraph-text-size: 1.5rem;
+$small-text-size: 1.4rem;
+
+$btn-text-size: 1.8rem;
+
+// - Text Spacing for WCAG Guidelines
+$word-spacing: 0.16;
+$line-height: 1.5;
+
+// COLOURS
+// - Site Colours
+$primary-text-color: #f2f2f2;
+$secondary-text-color: #1B1B1E;
+
+$primary-background-color: #1B1B1E;
+
+// - Button Colours
+$primary-btn-color: #f2f2f2;
+$primary-btn-text-color: #1B1B1E;
+$secondary-btn-color: #1B1B1E;
+$secondary-btn-text-color: #f2f2f2;
+$play-btn-color: #4F7641;
+$stop-btn-color: #ca2b45;
+$seq-btn-border-color: #656565;
+
+// - Slider Colours
+$master-slider: #ee5f77; 
+$volume-slider: #6cb3ff;
+$pan-slider: #62C370;
+$effect-slider: #E3E36A;
+
+// - Sequencer Colours
+$sequencer-1-color: #B6DCFE;
+$sequencer-2-color: #F6C8FF;
+$sequencer-3-color: #9EF0E4;
+$sequencer-4-color: #FFB7B7;
+
+$link-text-color: #6cb3ff;
+
+// - Focus Colours
+$focus-color: #5D90FF;
+$focus-text-color: #1B1B1E;

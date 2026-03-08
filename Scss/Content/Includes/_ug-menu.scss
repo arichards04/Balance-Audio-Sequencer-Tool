@@ -1,0 +1,74 @@
+/* --- USER GUIDE --- */
+
+html {
+    body {
+        main {
+
+            a {
+                color: $link-text-color;
+            }
+
+            .menu-ug {
+                li {
+                    list-style-type: none;
+
+                    &:last-child {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            #master-ug, #mixer-ug, #sequencer-ug, #video-demo {
+                .rtn {
+                    color: $volume-slider;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .master-ug, .mixer-ug, .sequencer-ug {
+                display: flex;
+                flex-wrap: wrap;
+                margin: 10px 0;
+
+                img {
+                    border: 1px solid $secondary-btn-text-color;
+                    border-radius: 5px;
+                    margin: 20px 0;
+                    width: 40%;
+                }
+
+                #tempo-img {
+                    width: 15%;
+                }
+            }
+
+            .sequencer-ug {
+                img {
+                    width: 100%;
+                }
+
+                iframe {
+                    width: 100%;
+                    height: 600px;
+                    border-radius: 5px;
+                    border: 1px solid $secondary-btn-text-color;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media  screen and (max-width: 991px) {
+    main {
+        .master-ug, .mixer-ug {
+            img {
+                width: 100% !important;
+            }
+
+            #tempo-img {
+                width: 50% !important;
+            }
+        }
+    }
+}

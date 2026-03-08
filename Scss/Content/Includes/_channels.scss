@@ -1,0 +1,177 @@
+/* --- CHANNELS --- */
+
+.channels {
+    border: 1px solid #f2f2f2;
+
+    #channel-2, #channel-3,  #channel-4 {
+        border-top: 1px solid #f2f2f2;
+    }
+
+    #channel-1, #channel-2, #channel-3, #channel-4 {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        // - Channel Mixers
+        .mix-box {
+            padding: 0 20px;
+            border-right: 1px solid #f2f2f2;
+
+            .channelNo {
+                font-weight: bold;
+            }
+
+            .instrument, .volume, .pan, .fx-select {
+                margin-bottom: 5px;
+            }
+
+            label {
+                @include paragraph;
+                justify-content: space-between;
+            }
+
+            .volume, .pan, .fx-control {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                #volume-1, #volume-2, #volume-3, #volume-4, #pan-control-1, #pan-control-2, #pan-control-3, #pan-control-4  {
+                    width: 90%;
+                }
+
+                #fx-control-1, #fx-control-2, #fx-control-3, #fx-control-4 {
+                    width: 80%;
+                }
+
+                #volume-1, #volume-2, #volume-3, #volume-4 {
+                    @include slider-type("volume");
+                }
+
+                #pan-control-1, #pan-control-2, #pan-control-3, #pan-control-4 {
+                    @include slider-type("pan");
+                }
+
+                #fx-control-1, #fx-control-2, #fx-control-3, #fx-control-4 {
+                    @include slider-type("effect");
+                }
+            }
+
+            .fx-select {                
+                #fx-select-1, #fx-select-2, #fx-select-3, #fx-select-4 {
+                    display: flex;
+
+                    legend {
+                        @include paragraph;
+                    }
+                    
+                    fieldset {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                    
+                    input {
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }  
+        
+        // - Channel Sequencers
+        #sequencer-1, #sequencer-2, #sequencer-3, #sequencer-4 {
+            display: grid;
+            grid-template-columns: repeat(8, auto);
+            gap: 3px;
+
+            button {
+                @include small-text;
+                background-color:  $secondary-btn-color;
+                color: $secondary-btn-text-color;
+                border: 1px solid $seq-btn-border-color;
+                width: 100%;
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+        }
+
+        #sequencer-1 {
+            button {
+                &:active, &.active {
+                    background-color: $sequencer-1-color;
+                    color: $primary-btn-text-color;
+                }
+
+                &:hover, &:focus {
+                    border: 1px solid $sequencer-1-color;
+                    outline: 1px solid $sequencer-1-color;
+                }
+            }
+        }
+
+        #sequencer-2 {
+            button {
+                &:active, &.active {
+                    background-color: $sequencer-2-color;
+                    color: $primary-btn-text-color;
+                }
+
+                &:hover, &:focus {
+                    border: 1px solid $sequencer-2-color;
+                    outline: 1px solid $sequencer-2-color;
+                }
+            }
+        }
+
+        #sequencer-3 {
+            button {
+                &:active, &.active {
+                    background-color: $sequencer-3-color;
+                    color: $primary-btn-text-color;
+                }
+
+                &:hover, &:focus {
+                    border: 1px solid $sequencer-3-color;
+                    outline: 1px solid $sequencer-3-color;
+                }
+            }
+        }
+
+        #sequencer-4 {
+            button {
+                &:active, &.active {
+                    background-color: $sequencer-4-color;
+                    color: $primary-btn-text-color;
+                }
+
+                &:hover, &:focus {
+                    border: 1px solid $sequencer-4-color;
+                    outline: 1px solid $sequencer-4-color;
+                }
+            }
+        }
+    }
+}
+
+@media  screen and (max-width: 991px) {
+    .channels {
+        #channel-1, #channel-2, #channel-3, #channel-4 {
+            .mix-box {
+                padding-bottom: 20px;
+                border-right: 0;
+
+                .fx-control {
+                    #fx-control-1, #fx-control-2, #fx-control-3, #fx-control-4 {
+                    width: 89%;
+                }
+                }
+            }
+
+            #sequencer-1, #sequencer-2, #sequencer-3, #sequencer-4 {
+                button {
+                    height: 50px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+/* --- STRUCTURE --- */
+
+html {
+    font-size: 62.5%;
+
+    body {
+        background-color: $primary-background-color;
+        color: $primary-text-color;
+
+        header {
+            display: flex;
+            padding: 30px 0 20px;
+        }
+
+        footer {
+            padding: 20px 0 10px;
+            text-align: center;
+        }
+    }
+}
